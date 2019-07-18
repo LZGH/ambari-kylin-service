@@ -16,6 +16,7 @@ class KylinQuery(Script):
         Execute('cd ' + params.install_dir + '; wget ' + params.downloadlocation + ' -O kylin.tar.gz  ')
         Execute('cd ' + params.install_dir + '; tar -xvf kylin.tar.gz')
         Execute('cd ' + params.install_dir + ';rm -rf latest; ln -s apache-kylin* latest')
+		Execute('cd ' + params.install_dir + '; bin/download-spark.sh')
                 
 
     def configure(self, env):  
