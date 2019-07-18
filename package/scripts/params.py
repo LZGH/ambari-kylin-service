@@ -8,7 +8,7 @@ service_packagedir = os.path.realpath(__file__).split('/scripts')[0]
 tmp_dir = Script.get_tmp_dir()
 kylin_properties=config['configurations']['kylin']['kylin_properties']
 hdp_version =  default("/commandParams/version", None)
-downloadlocation = config['configurations']['kylin']['download.location']
+downloadlocation = "http://mirror.bit.edu.cn/apache/kylin/apache-kylin-2.6.3/apache-kylin-2.6.3-bin-hadoop3.tar.gz"
 #install_dir = config['configurations']['kylin']['install.dir']
 install_dir = format('/opt/kylin')
 current_host_name = socket.gethostname()
@@ -21,3 +21,4 @@ kylin_servers = ';'.join( "server " + i + ":" + server_port for i in server_clus
 hadoop_conf_dir = install_dir + "/latest/conf/hadoop_conf"
 nginx_conf=config['configurations']['nginx']['nginx_conf']
 nginx_port=config['configurations']['nginx']['nginx_port']
+

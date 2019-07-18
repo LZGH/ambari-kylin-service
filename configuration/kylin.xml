@@ -381,10 +381,5 @@
 
     </value>
   </property>
-<property>
-    <name>download.location</name>
-    <value>http://mirror.reverse.net/pub/apache/kylin/apache-kylin-2.6.3/apache-kylin-2.6.3-bin-hadoop3.tar.gz</value>
-    <description>Location to download gstore</description>
- </property> 
 
 </configuration>
